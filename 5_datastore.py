@@ -16,7 +16,7 @@ room-number,use,sq-ft,price
 '''
 
 
-
+#1 key called medical. it is a list of five dictionaries
 
 datastore = { "medical":[
       { "room-number": 100,
@@ -47,3 +47,12 @@ datastore = { "medical":[
 
       ]
 }
+
+ourfile = open('retail_space2.csv','w')
+outfile.write('room-number,use,sq-ft,price\n')
+
+#list=datastore medical
+for x in datastore['medical']:
+  outfile.write(str(x['room-number'])+','+x['use']+','+str(x['sq-ft'])+','+str(x['price'])+'\n')
+
+outfile.close()
